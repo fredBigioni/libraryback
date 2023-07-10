@@ -17,7 +17,7 @@ app.get('/api/search-books', (req, res) => {
     axios.get(apiUrl)
         .then(response => {
             res.cookie('accessToken', 'ABC123', {
-                sameSite: 'lax',
+                sameSite: 'none',
                 secure: true,
             });
             res.json(response.data);
